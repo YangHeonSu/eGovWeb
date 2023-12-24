@@ -68,6 +68,7 @@ public class EgovSampleController {
 	/** Validator */
 	@Resource(name = "beanValidator")
 	protected DefaultBeanValidator beanValidator;
+	
 
 	/**
 	 * 글 목록을 조회한다. (pageing)
