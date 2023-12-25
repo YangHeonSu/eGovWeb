@@ -20,7 +20,7 @@ th, td {
 </style>
 
 <body>
-	<form name="frm" method="post" action="">
+	<form name="frm" method="post" action="deptSave.do">
 		<table>
 			<tr>
 				<th>부서 번호</th>
