@@ -1,10 +1,10 @@
-package egovframework.example.sample.web;
+package web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import egovframework.example.sample.service.DeptVO;
+import domain.DeptVO;
 
 @Controller
 public class DeptController {

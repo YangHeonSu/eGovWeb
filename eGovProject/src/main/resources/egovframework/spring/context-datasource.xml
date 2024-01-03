@@ -9,9 +9,10 @@
 		<jdbc:script location= "classpath:/db/sampledb.sql"/>
 	</jdbc:embedded-database>
      
+    <!-- MariaDB 설정 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mariadb.jdbc.Driver"/>
-        <property name="url" value="jdbc:mariadb://127.0.0.1:3308/eGovMaria" />
+        <property name="url" value="jdbc:mariadb://127.0.0.1:3306/eGovMaria" />
         <property name="username" value="root"/>
         <property name="password" value="mysql12#$"/>
     </bean>     
