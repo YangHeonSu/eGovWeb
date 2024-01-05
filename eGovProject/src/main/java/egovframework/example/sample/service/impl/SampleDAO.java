@@ -84,15 +84,15 @@ public class SampleDAO extends EgovAbstractDAO {
 		return (SampleVO) select("sampleDAO.selectSample", vo);
 	}
 
-	/**
-	 * 글 목록을 조회한다.
-	 * @param searchMap - 조회할 정보가 담긴 Map
-	 * @return 글 목록
-	 * @exception Exception
-	 */
-	public List<?> selectSampleList(SampleDefaultVO searchVO) throws Exception {
-		return list("sampleDAO.selectSampleList", searchVO);
-	}
+//	/**
+//	 * 글 목록을 조회한다.
+//	 * @param searchMap - 조회할 정보가 담긴 Map
+//	 * @return 글 목록
+//	 * @exception Exception
+//	 */
+//	public List<?> selectSampleList(SampleDefaultVO searchVO) throws Exception {
+//		return list("sampleDAO.selectSampleList", searchVO);
+//	}
 
 	/**
 	 * 글 총 갯수를 조회한다.

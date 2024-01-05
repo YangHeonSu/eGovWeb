@@ -9,9 +9,13 @@
 		<property name="mapperLocations" value="classpath:/egovframework/sqlmap/example/mappers/*.xml" />
 	</bean>
 	
+<!-- 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	</bean> -->
+	
 	<!-- MapperConfigurer setup for MyBatis Database Layer with @Mapper("deptMapper") in DeptMapper Interface -->
  	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
-		<property name="basePackage" value="egovframework.example.sample.service.impl" />
+		<property name="basePackage" value="egovframework" />
 	</bean>
     
 </beans>
