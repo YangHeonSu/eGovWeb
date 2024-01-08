@@ -3,7 +3,7 @@
 <mapper namespace="egovframework.dao.DeptMapper">
 
 <select id="selectDept" resultType="deptVO">
-	select * from Dept;
+	select * from DEPT;
 </select>
 
 </mapper>
