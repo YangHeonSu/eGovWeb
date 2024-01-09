@@ -4,9 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<script src="/js/jquery-3.7.1.js"/></script>
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+<title>LoginPage</title>
 </head>
 <body>
-asdasdasd
+	<div>
+		<input type="text" id="userId">
+		<input type="password" id="password">
+	</div>
+	<div>
+		<button type="button" id="loginBtn">로그인</button>
+	</div>
 </body>
 </html>
+
+<script>
+	$('#loginBtn').click(function () {
+		alert("asdasdasd");
+	})
+
+</script>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.dao.UserMapper">
+
+	<select id="selectAll" resultType="userVO">
+		select * from USER;
+	</select>
+
+	<select id="selectById" resultType="userVO"
+		parameterType="String">
+		select * from USER where id = #{id};
+	</select>
+
+	<insert id="saveUser" parameterType="userVO">
+		insert into USER (
+			userId,
+			password,
+			name,
+			auth,
+			dept
+		)VALUES(
+			#{userId},
+			#{password},
+			#{name},
+			#{auth},
+			#{dept},
+		);
+	</insert>
+
+</mapper>
