@@ -18,11 +18,10 @@
 		<button type="button" id="loginBtn">로그인</button>
 	</div>
 </body>
-</html>
-
 <script>
 	$('#loginBtn').click(function () {
-		alert("asdasdasd");
+	
 	})
 
 </script>
+</html>

@@ -6,12 +6,24 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import egovframework.domain.UserVO;
+
 public class CustomUserDetailDTO implements UserDetails {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String userId;
 	private String password;
-	private ArrayList<GrantedAuthority> authority;
+	private String authority;
 	
+	
+	public CustomUserDetailDTO(UserVO user) {
+		this.userId = user.getUserId();
+		this.password = user.getPassword();
+		this.authority = user.getAuth();
+	}
 	
 	public String getUserId() {
 		return userId;
@@ -25,17 +37,23 @@ public class CustomUserDetailDTO implements UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public ArrayList<GrantedAuthority> getAuthority() {
+
+	
+	public String getAuthority() {
 		return authority;
 	}
-	public void setAuthority(ArrayList<GrantedAuthority> authority) {
+
+	public void setAuthority(String authority) {
 		this.authority = authority;
 	}
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<GrantedAuthority> collection = new ArrayList();
+		collection.add(()-> "" + authority);
+		return collection;
 	}
+	
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub

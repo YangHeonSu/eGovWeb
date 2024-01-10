@@ -44,4 +44,9 @@ public class UserServiceImpl extends EgovAbstractServiceImpl implements UserServ
 		userMapper.delete(id);
 	}
 
+	@Override
+	public UserVO selectByUserId(String userId) {
+		return userMapper.selectByUserId(userId);
+	}
+
 }

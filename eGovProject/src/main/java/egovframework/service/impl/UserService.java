@@ -12,6 +12,9 @@ public interface UserService {
 	// 계정 상세 조회
 	UserVO selectById(String id);
 	
+	// 계정 아이디를 통한 상세 조회
+	UserVO selectByUserId(String userId);
+	
 	// 계정 등록
 	void save(UserVO vo);
 	

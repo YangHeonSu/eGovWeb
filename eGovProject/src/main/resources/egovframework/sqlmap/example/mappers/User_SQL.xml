@@ -10,7 +10,11 @@
 		parameterType="String">
 		select * from USER where id = #{id};
 	</select>
-
+	
+	<select id="selectByUserId" resultType="userVO" parameterType="String">
+		select * from USER where userId = #{userId};
+	</select>	
+	
 	<insert id="saveUser" parameterType="userVO">
 		insert into USER (
 			userId,
@@ -23,7 +27,7 @@
 			#{password},
 			#{name},
 			#{auth},
-			#{dept},
+			#{dept}
 		);
 	</insert>
 

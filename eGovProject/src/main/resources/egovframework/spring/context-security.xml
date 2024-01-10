@@ -21,7 +21,7 @@
 	
 		<security:intercept-url pattern="/log**.do" access="permitAll"/>
 		<security:intercept-url pattern="/" access="permitAll"/>
-		<security:intercept-url pattern="/user**" access="permitAll"/>
+		<security:intercept-url pattern="/user**.do" access="permitAll"/>
 		<security:intercept-url pattern="/**" access="denyAll"/>
 		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
 

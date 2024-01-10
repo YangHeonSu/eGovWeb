@@ -36,13 +36,12 @@ public class CustomLoginAuthenticationProvider implements AuthenticationProvider
 			throw new BadCredentialsException("비밀번호가 일치하지 않습니다.");
 		}
 	
-		return new UsernamePasswordAuthenticationToken(customUserDetailDTO, null, customUserDetailDTO.getAuthority());
+		return new UsernamePasswordAuthenticationToken(customUserDetailDTO, null, customUserDetailDTO.getAuthorities());
 		
 	}
 
 	@Override
 	public boolean supports(Class<?> authentication) {
-		// TODO Auto-generated method stub
 		return authentication.equals(UsernamePasswordAuthenticationToken.class);
 	}
 }

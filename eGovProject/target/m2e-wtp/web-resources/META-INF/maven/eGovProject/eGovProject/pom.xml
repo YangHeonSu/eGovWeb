@@ -21,6 +21,7 @@
 		<spring.maven.artifact.version>4.3.25.RELEASE</spring.maven.artifact.version>
 		<egovframework.rte.version>3.10.0</egovframework.rte.version>
 		<spring.security.version>4.2.3.RELEASE</spring.security.version>
+		<org.apache.tiles.version></org.apache.tiles.version>
 	</properties>
 
 	<repositories>
@@ -174,6 +175,31 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.9</version>
 		</dependency>
 	</dependencies>
 

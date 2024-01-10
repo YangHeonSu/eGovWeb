@@ -10,9 +10,12 @@ public interface UserMapper {
 	
 	// 계정 목록 조회
 	List<UserVO> selectAll();
-	
+
 	// 계정 상세 조회
 	UserVO selectById(String id);
+	
+	// 
+	UserVO selectByUserId(String userId);
 	
 	// 계정 등록
 	void saveUser(UserVO vo);
@@ -22,5 +25,4 @@ public interface UserMapper {
 	
 	// 계정 삭제
 	void delete(String id);
-
 }
