@@ -26,11 +26,7 @@ public class DeptController {
 		}
 		
 		return null;
-		
 	}
-	
-	
-	
 	
 	/**
 	 * 부서 등록 페이지

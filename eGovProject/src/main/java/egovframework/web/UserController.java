@@ -40,8 +40,11 @@ public class UserController {
 	 * 계정 등록
 	 */
 	@RequestMapping(value = "/userSave.do", method = RequestMethod.POST)
-	public String save(UserVO vo) throws Exception {
+	@ResponseBody
+	public Map<String, Object> save(@RequestBody UserVO vo) throws Exception {
+		Map<String, Object> result = new HashedMap();
 		userService.save(vo);
-		return "redirect:/login.do";
+		result.put("result", 200);
+		return result;
 	}
 }
