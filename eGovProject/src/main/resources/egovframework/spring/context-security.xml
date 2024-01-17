@@ -6,24 +6,35 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-	<bean id="customUserDetailsService" class="egovframework.login.CustomUserDetailsService"/>
-	<bean id="customLoginAuthenticationProvider" class="egovframework.login.CustomLoginAuthenticationProvider"/>
-	<bean id="userLoginSuccessHandler" class="egovframework.login.LoginSuccessHandler"/>
-	<bean id="userLoginFailuerHandler" class="egovframework.login.LoginFailureHandler"/>
-			
+	<bean id="bcryptPasswordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<bean id="customUserDetailsService"
+		class="egovframework.login.CustomUserDetailsService" />
+	<bean id="customLoginAuthenticationProvider"
+		class="egovframework.login.CustomLoginAuthenticationProvider" />
+	<bean id="userLoginSuccessHandler"
+		class="egovframework.login.LoginSuccessHandler" />
+	<bean id="userLoginFailuerHandler"
+		class="egovframework.login.LoginFailureHandler" />
+
 	<security:http pattern="/styles/**" security="none" />
 	<security:http pattern="/images/**" security="none" />
+	<security:http pattern="/css/**" security="none" />
 	<security:http pattern="/js/**" security="none" />
 	<security:http pattern="/fonts/**" security="none" />
 
 	<security:http auto-config="true" use-expressions="true">
-	
-		<security:intercept-url pattern="/log**.do" access="permitAll"/>
-		<security:intercept-url pattern="/" access="permitAll"/>
-		<security:intercept-url pattern="/user**.do" access="permitAll"/>
-		<security:intercept-url pattern="/**" access="denyAll"/>
-		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+
+		<security:intercept-url pattern="/log**.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/"
+			access="permitAll" />
+		<security:intercept-url pattern="/user**.do"
+			access="permitAll" />
+		<security:intercept-url pattern="/**"
+			access="denyAll" />
+		<security:intercept-url pattern="/admin/**"
+			access="hasRole('ROLE_ADMIN')" />
 
 		<security:form-login 
 			username-parameter="userId"
@@ -32,23 +43,27 @@
 			login-processing-url="/loginProc.do"
 			authentication-success-handler-ref="userLoginSuccessHandler"
 			authentication-failure-handler-ref="userLoginFailuerHandler" />
-			
+
 		<security:logout logout-url="/logout.do"
-			logout-success-url="/login.do"
-			invalidate-session="true"
-			delete-cookies="true"/>
-			
-		<security:csrf disabled="true"/>
+			logout-success-url="/login.do" invalidate-session="true"
+			delete-cookies="true" />
+
+		<security:csrf disabled="true" />
 
 		<!-- 세션 만료 시 이동 URL -->
-		<security:session-management invalid-session-url="/login.do">
-			<security:concurrency-control max-sessions="1" expired-url="/login.do"/>
+		<security:session-management
+			invalid-session-url="/login.do">
+			<security:concurrency-control
+				max-sessions="1" expired-url="/login.do" />
 		</security:session-management>
 	</security:http>
 
 
 	<security:authentication-manager>
-		<security:authentication-provider ref="customLoginAuthenticationProvider"/>
-		<security:authentication-provider user-service-ref="customUserDetailsService"/>
+		<security:authentication-provider
+			ref="customLoginAuthenticationProvider" />
+		<security:authentication-provider
+			user-service-ref="customUserDetailsService" />
 	</security:authentication-manager>
+	
 </beans>
