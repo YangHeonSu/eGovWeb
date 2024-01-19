@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +26,14 @@ public class UserController {
 
 	@Autowired
 	private DeptService deptService;
+	
+	/**
+	 * 계정 목록 페이지
+	 */
+	@RequestMapping(value="/userList.do", method= RequestMethod.GET)
+	public String getListPage() {
+		return "user/userList";
+	}
 
 	/**
 	 * 계정 등록 페이지
@@ -35,7 +44,20 @@ public class UserController {
 		model.addAttribute("dept", dept);
 		return "user/userForm";
 	}
-
+	
+	
+	/*** API ***/
+	
+	/**
+	 * 계정 목록 조회
+	 */
+	@RequestMapping(value = "/users.do", method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<List<UserVO>> getUserList() {
+		List<UserVO> users = userService.selectAll();
+		return ResponseEntity.ok(users);
+	}
+	
 	/**
 	 * 계정 등록
 	 */

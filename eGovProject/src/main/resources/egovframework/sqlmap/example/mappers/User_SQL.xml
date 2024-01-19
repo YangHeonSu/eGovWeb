@@ -3,7 +3,7 @@
 <mapper namespace="egovframework.dao.UserMapper">
 
 	<select id="selectAll" resultType="userVO">
-		select * from USER;
+		select userId, name, auth from USER;
 	</select>
 
 	<select id="selectById" resultType="userVO"
