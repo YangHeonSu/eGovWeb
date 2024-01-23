@@ -14,18 +14,23 @@
 
 </head>
 <body>
+	<div>
+		<div>
+			<button type="button" class="btn btn-primary" id="saveFormBtn">등록</button>
+		</div>
+		<div id="grid"></div>
 
-<div id="grid"></div>
+	</div>
 
 
-<!-- Custom scripts for all pages-->
+	<!-- Custom scripts for all pages-->
 
-<script src="js/bootstrap/sb-admin-2.min.js"></script>
-<script src="js/jquery/jquery-3.6.0.js" /></script>
-<script src="js/jquery/jquery-3.6.0.min.js"></script>
-<script src="js/tui/tui-grid.js" /></script>
-<script src="js/tui/tui-grid.min.js"></script>
-<script src="js/user/userList.js"></script>
+	<script src="js/bootstrap/sb-admin-2.min.js"></script>
+	<script src="js/jquery/jquery-3.6.0.js" /></script>
+	<script src="js/jquery/jquery-3.6.0.min.js"></script>
+	<script src="js/tui/tui-grid.js" /></script>
+	<script src="js/tui/tui-grid.min.js"></script>
+	<script src="js/user/userList.js"></script>
 </body>
 
 </html>

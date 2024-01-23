@@ -27,7 +27,7 @@
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="webBindingInitializer">
 			<bean
-				class="egovframework.example.cmmn.web.EgovBindingInitializer" />
+				class="egovframework.cmmn.web.EgovBindingInitializer" />
 		</property>
 		<property name="messageConverters">
 			<list>
@@ -84,7 +84,7 @@
 
 	<!-- For Pagination Tag -->
 	<bean id="imageRenderer"
-		class="egovframework.example.cmmn.web.EgovImgPaginationRenderer" />
+		class="egovframework.cmmn.web.EgovImgPaginationRenderer" />
 
 	<bean id="paginationManager"
 		class="egovframework.rte.ptl.mvc.tags.ui.pagination.DefaultPaginationManager">

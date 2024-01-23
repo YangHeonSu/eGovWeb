@@ -51,9 +51,8 @@
 				<ref bean="otherHandler" />
 			</list>
 		</property>
-	</bean>
-
-	<bean id="egovHandler" class="egovframework.example.cmmn.EgovSampleExcepHndlr" />
-	<bean id="otherHandler" class="egovframework.example.cmmn.EgovSampleOthersExcepHndlr" />	
+	</bean>	
 	
+	<bean id="egovHandler" class="egovframework.cmmn.EgovSampleExcepHndlr"/>
+	<bean id="otherHandler" class="egovframework.cmmn.EgovSampleOthersExcepHndlr"/>
 </beans>

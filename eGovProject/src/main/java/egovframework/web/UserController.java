@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import egovframework.domain.DeptVO;
 import egovframework.domain.UserVO;
-import egovframework.service.impl.DeptService;
+import egovframework.service.impl.DepartmentService;
 import egovframework.service.impl.UserService;
 
 @Controller
@@ -25,7 +25,7 @@ public class UserController {
 	private UserService userService;
 
 	@Autowired
-	private DeptService deptService;
+	private DepartmentService deptService;
 	
 	/**
 	 * 계정 목록 페이지
