@@ -16,8 +16,9 @@
 		class="egovframework.login.LoginSuccessHandler" />
 	<bean id="userLoginFailuerHandler"
 		class="egovframework.login.LoginFailureHandler" />
-	<security:http pattern="/**/**.js" security="none" />	
-	<security:http pattern="/src/main/webapp/**" security="none" />
+	<security:http pattern="/**/**.js" security="none" />
+	<security:http pattern="/src/main/webapp/**"
+		security="none" />
 	<security:http pattern="/styles/**" security="none" />
 	<security:http pattern="/images/**" security="none" />
 	<security:http pattern="/css/**" security="none" />
@@ -37,10 +38,8 @@
 		<security:intercept-url pattern="/admin/**"
 			access="hasRole('ROLE_ADMIN')" />
 
-		<security:form-login 
-			username-parameter="userId"
-			password-parameter="password" 
-			login-page="/login.do"
+		<security:form-login username-parameter="userId"
+			password-parameter="password" login-page="/login.do"
 			login-processing-url="/loginProc.do"
 			authentication-success-handler-ref="userLoginSuccessHandler"
 			authentication-failure-handler-ref="userLoginFailuerHandler" />
@@ -66,5 +65,5 @@
 		<security:authentication-provider
 			user-service-ref="customUserDetailsService" />
 	</security:authentication-manager>
-	
+
 </beans>

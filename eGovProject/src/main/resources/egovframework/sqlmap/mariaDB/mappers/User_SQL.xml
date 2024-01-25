@@ -30,5 +30,18 @@
 			#{dept}
 		);
 	</insert>
+	
+	<update id="updateUser" parameterType="userVO">
+		update USER set 
+			name = #{name},
+			auth = #{auth},
+			dept = #{dept}
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="deleteUser" parameterType="String">
+		delete from USER where id = #{id}
+	</delete>
 
 </mapper>
